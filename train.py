@@ -134,7 +134,7 @@ if opt.label_smoothing > 0.0 and version[0] < 1 or version[1] < 10:
 #
 
 fp16 = opt.fp16
-data_dir = opt.data_dir
+data_dir = '/kaggle/input/vricvehicles/Vehicles/train_images/MVI_40181_003_img00180.jpg'
 name = opt.name
 
 if opt.tpu_cores > 0:
