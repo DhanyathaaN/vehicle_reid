@@ -43,7 +43,7 @@ from dataset import ImageDataset, BatchSampler
 # Options
 # --------
 parser = argparse.ArgumentParser(description='Training')
-parser.add_argument('--data_dir', required=False,
+parser.add_argument('--data_dir', required=True,
                     type=str, help='path to the dataset root directory')
 parser.add_argument("--train_csv_path", required=True, type=str)
 parser.add_argument("--val_csv_path", required=True, type=str)
@@ -134,7 +134,7 @@ if opt.label_smoothing > 0.0 and version[0] < 1 or version[1] < 10:
 #
 
 fp16 = opt.fp16
-data_dir = '/kaggle/input/vricvehicles/Vehicles/train_images/'
+data_dir = opt.data_dir
 name = opt.name
 
 if opt.tpu_cores > 0:
