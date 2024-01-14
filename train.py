@@ -43,7 +43,7 @@ from dataset import ImageDataset, BatchSampler
 # Options
 # --------
 parser = argparse.ArgumentParser(description='Training')
-parser.add_argument('--data_dir', required=True,
+parser.add_argument('--data_dir', required=False,
                     type=str, help='path to the dataset root directory')
 parser.add_argument("--train_csv_path", required=True, type=str)
 parser.add_argument("--val_csv_path", required=True, type=str)
